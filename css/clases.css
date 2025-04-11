@@ -1,0 +1,234 @@
+/*FILTRO-CLASES*/
+.input-filtro {
+  display: none; /*Esconder el input*/
+  margin-bottom: 5px;
+}
+
+.label-filtro {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 8px 15px;
+  font-weight: 600;
+}
+
+.label-filtro:hover {
+  font-size: 20px;
+  color: #ff1133; /*Color del texto al pasar el mouse*/
+  transition: all 0.7s ease; /*Transicion suave*/
+}
+
+.input-filtro:checked + .label-filtro {
+  background-color: #ff1133; /*Color de fondo al pasar el mouse*/
+  color: #fff; /*Color del texto al pasar el mouse*/
+  transition: all 0.7s ease; /*Transicion suave*/
+  border-radius: 7px;
+  padding: 7px;
+}
+
+/*HORARIO-SEMANAL*/
+table {
+  border-collapse: collapse;
+  overflow-x: auto; /* Permitir desplazamiento horizontal */
+  margin: 2rem 3rem; /*Centrar la tabla*/
+  display: block; /* Hacer que la tabla sea un bloque para permitir el desplazamiento */
+  white-space: nowrap; /* Evitar el ajuste de texto */
+  max-width: 100%;
+  text-align: center; /* Alinear el texto al centro */
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 15px;
+  font-size: 18px;
+  text-align: center;
+  max-width: none;
+  overflow: visible; /* Esconder el contenido que se sale de la celda */
+  text-overflow: clip; /* Mostrar puntos suspensivos si el texto es demasiado largo */
+  white-space: normal;
+}
+
+th {
+  background-color: #151623;
+  color: #fff;
+}
+
+td span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/*FILTRADO*/
+.musculacion,
+.crossfit,
+.yoga,
+.spinning {
+  display: table-cell; /* Mostrar como celdas de tabla */
+}
+
+/* Filtro: mostrar solo clases específicas */
+#f-musculacion:checked ~ table td.musculacion,
+#f-crossfit:checked ~ table td.crossfit,
+#f-yoga:checked ~ table td.yoga,
+#f-spinning:checked ~ table td.spinning {
+  background-color: #ff1133;
+  color: #fff;
+  transition: all 0.7s ease; /*Transicion suave*/
+}
+
+/* Mostrar todo si se elige "Todas" */
+#f-todas:checked ~ table td.musculacion,
+#f-todas:checked ~ table td.crossfit,
+#f-todas:checked ~ table td.yoga,
+#f-todas:checked ~ table td.spinning {
+  background-color: #ff1133;
+  color: #fff;
+  transition: all 0.7s ease; /*Transicion suave*/
+}
+
+/*GALERIA-MASONRY*/
+.masonry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.masonry .galeria {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Cuatro columnas */
+  gap: 15px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.masonry .galeria img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajustar la imagen al contenedor */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.masonry .galeria .img-a {
+  grid-column: 1/3; /* Ocupa dos columnas */
+  grid-row: 1/3;
+}
+
+.masonry .galeria .img-b {
+  grid-column: 3/5; /* Ocupa dos columnas */
+}
+
+.masonry .galeria .img-c {
+  grid-column: 2/4; /* Ocupa una columna */
+  grid-row: 3/4; /* Ocupa una fila */
+}
+
+.masonry .galeria .img-d {
+  grid-column: 4/5; /* Ocupa una columna */
+  grid-row: 2/4; /* Ocupa dos filas */
+}
+
+.masonry .galeria .img-e {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+.masonry .galeria .img-f {
+  grid-column: 1/2;
+  grid-row: 3/5;
+}
+
+.masonry .galeria .img-g {
+  grid-column: 2/5; /* Ocupa tres columnas */
+  grid-row: 4/5; /* Ocupa una fila */
+}
+
+/*CARDS-CURSOS*/
+.cards-clases {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-bottom: 5rem;
+}
+
+.cards-clases .card {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  border-radius: 15px;
+  overflow: hidden; /* Esconder el contenido que se sale del contenedor */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra */
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+.cards-clases .card:hover {
+  transform: scale(1.03); /* Aumentar el tamaño al pasar el cursor */
+}
+
+.cards-clases .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajustar la imagen al contenedor */
+  transition: transform 0.5s ease; /* Transición suave */
+}
+
+.cards-clases .card:hover img {
+  transform: scale(
+    1.1
+  ); /* Aumentar el tamaño de la imagen al pasar el cursor */
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.overlay p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.price-tag {
+  background: #ff1133;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-top: 10px;
+  align-self: flex-start;
+}
+
+.price-tag:hover {
+  background: #fff; /*Color de fondo al pasar el mouse*/
+  color: #ff1133; /*Color del texto al pasar el mouse*/
+  transition: 0.3s; /*Transicion suave*/
+}

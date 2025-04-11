@@ -1,0 +1,182 @@
+/***********************************************/
+/*************PAGINA DE ENTRENADORES***********/
+/*********************************************/
+
+/*SECCION OBJETIVOS*/
+.objetivos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch; /* Alinear los elementos al centro y estirarlos */
+  margin: auto;
+  padding: 3rem 0;
+}
+
+.card-objetivo {
+  flex: 1; /* Permitir que las tarjetas se estiren para ocupar el espacio disponible */
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dark {
+  background-color: #111;
+  color: #fff;
+}
+
+.dark .icon a {
+  color: #ff1133;
+}
+
+.red {
+  background-color: #ff1133;
+  color: #fff;
+}
+
+.red .icon a {
+  color: #111;
+}
+
+.card-objetivo .icon {
+  font-size: 40px;
+  color: #ff1133;
+  margin-bottom: 10px;
+}
+
+.red .icon {
+  color: #fff;
+}
+
+.card-objetivo h2 {
+  font-size: 28px;
+  margin: 0 0 10px;
+}
+
+.card-objetivo p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/*SECCION ENTRENADORES*/
+.entrenadores-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px; /* Espacio entre los entrenadores */
+  padding: 50px; /* Espacio interno */
+  margin-bottom: 5rem;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 270px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-card-back {
+  background-color: #111;
+  color: #fff;
+  transform: rotateY(180deg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.trainer-name {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.skill-bar {
+  width: 100%;
+  text-align: left;
+  margin: 10px 0;
+}
+
+.skill-bar span {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.bar {
+  width: 100%;
+  background: #2f283e;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar-inner {
+  height: 10px;
+  background: #ff1133;
+  width: 0;
+  animation: grow 2s forwards;
+}
+
+@keyframes grow {
+  0% {
+    width: 0;
+  }
+}
+
+.strength .bar-inner {
+  width: 90%;
+}
+.flexibility .bar-inner {
+  width: 60%;
+}
+.endurance .bar-inner {
+  width: 85%;
+}
+
+.stars {
+  margin-top: 15px;
+}
+
+.stars span {
+  font-size: 40px;
+  color: goldenrod;
+  transition: color 0.3s ease;
+}
+
+.stars span:hover,
+.stars span:hover ~ span {
+  color: gold;
+}

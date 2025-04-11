@@ -1,0 +1,157 @@
+/***********************************************/
+/*************PAGINA DE CONTACTO***************/
+/*********************************************/
+.formulario-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /*Altura completa de la ventana*/
+  background: linear-gradient(rgba(0 0 0 / 0.8), rgba(0 0 0 / 0.8)),
+    url(../images/principal-2.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.formulario {
+  background: transparent;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px; /*Ancho maximo*/
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: grid;
+  gap: 20px;
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-grupo .label-form {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 20px;
+  text-align: left;
+}
+
+.form-grupo input,
+.form-grupo textarea {
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-grupo input:invalid,
+.form-grupo textarea:invalid {
+  border-color: #ff1133; /* Color de borde al estar vacío */
+}
+
+.form-grupo input:valid,
+.form-grupo textarea:valid {
+  border-color: #2ecc71; /* Color de borde al estar lleno */
+}
+
+.formulario button {
+  background-color: #ff1133;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+  background-color: #fff;
+  color: #ff1133;
+  transition: 0.3s;
+}
+
+.spinner-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: row;
+}
+
+.spinner {
+  border: 3px solid #ff1133;
+  border-top: 4px solid white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  display: none;
+}
+
+/* Animación */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* MODAL */
+.modal {
+  position: fixed; /*Posicion fija*/
+  top: 0;
+  left: 0;
+  width: 100vw; /*Ancho completo*/
+  height: 100vh; /*Altura completa*/
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal-contenido {
+  background: #fff;
+  padding: 30px; /*Relleno*/
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+}
+
+.modal-contenido h2 {
+  color: #2ecc71;
+  padding-bottom: 20px;
+}
+
+.modal-contenido p {
+  color: #111;
+  margin-bottom: 5px; /*Margen inferior*/
+}
+
+.modal-contenido button {
+  background-color: #ff1133;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  margin-top: 1rem;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.modal-contenido button:hover {
+  background-color: #fff; /*Color de fondo al pasar el mouse*/
+  color: #ff1133; /*Color del texto al pasar el mouse*/
+  transition: 0.3s; /*Transicion suave*/
+}
