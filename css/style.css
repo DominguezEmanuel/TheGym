@@ -12,13 +12,6 @@ html {
   scroll-behavior: smooth; /*Desplazamiento suave y fluido*/
 }
 
-body {
-  background-color: #fff;
-  text-align: center;
-  overflow-x: hidden; /*Evitar el desplazamiento horizontal*/
-  margin: 0;
-}
-
 a {
   text-decoration: none; /*Eliminar el subrayado*/
   color: #fff; /*Color de los enlaces*/

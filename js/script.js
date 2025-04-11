@@ -17,22 +17,25 @@ function seleccionar() {
 }
 
 //Función del formulario de contacto
-const form = document.getElementById("contactoFormulario");
-const spinner = document.getElementById("spinner");
-const modal = document.getElementById("modal");
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactoFormulario");
+  if (!form) return;
+  const spinner = document.getElementById("spinner");
+  const modal = document.getElementById("modal");
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  // Mostrar spinner
-  spinner.style.display = "inline-block";
+    // Mostrar spinner
+    spinner.style.display = "inline-block";
 
-  // Simular envío de datos (2 segundos)
-  setTimeout(() => {
-    spinner.style.display = "none";
-    form.reset();
-    modal.style.display = "flex";
-  }, 2000);
+    // Simular envío de datos (2 segundos)
+    setTimeout(() => {
+      spinner.style.display = "none";
+      form.reset();
+      modal.style.display = "flex";
+    }, 2000);
+  });
 });
 
 function closeModal() {
@@ -77,4 +80,29 @@ document.querySelectorAll('input[name="tag"]').forEach((input) => {
         articulo.style.display = "none";
       });
   });
+});
+
+//DARKMODE
+const toggle = document.getElementById("checkbox");
+const body = document.body;
+
+// Cargar tema guardado
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+  body.classList.add(savedTheme);
+  toggle.checked = savedTheme === "dark-theme";
+} else {
+  // Tema por defecto
+  body.classList.add("dark-theme");
+}
+console.log("Boton presionado");
+// Al cambiar el switch
+toggle.addEventListener("change", () => {
+  if (toggle.checked) {
+    body.classList.replace("light-theme", "dark-theme");
+    localStorage.setItem("theme", "dark-theme");
+  } else {
+    body.classList.replace("dark-theme", "light-theme");
+    localStorage.setItem("theme", "light-theme");
+  }
 });

@@ -58,6 +58,10 @@
   line-height: 1.5;
 }
 
+p {
+  text-align: center;
+}
+
 /*SECCION ENTRENADORES*/
 .entrenadores-container {
   display: flex;
