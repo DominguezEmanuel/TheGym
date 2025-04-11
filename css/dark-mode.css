@@ -97,11 +97,50 @@
 /* Tema claro por defecto */
 body.light-theme {
   background-color: #ffffff;
-  color: #000000;
+  color: #111;
 }
 
 /* Tema oscuro */
 body.dark-theme {
-  background-color: #121212;
+  background-color: #111;
   color: #ffffff;
+}
+
+body.dark-theme .cards-seccion .card p {
+  color: #111;
+}
+
+body.dark-theme .subtitulo {
+  color: #fff;
+}
+
+body.dark-theme .caja-contacto p {
+  color: #fff;
+}
+
+body.dark-theme .testimonios .slide {
+  background: #fff;
+}
+
+body.dark-theme .slide p {
+  color: #111;
+}
+
+body.dark-theme .objetivos-container .dark {
+  background-color: #fff;
+  color: #111;
+}
+
+body.dark-theme .flip-card .flip-card-inner .flip-card-back {
+  background-color: #fff;
+  color: #111;
+}
+
+body.dark-theme .flip-card .trainer-name {
+  color: #111;
+}
+
+body.dark-theme .toggle-label {
+  background: #fff;
+  color: #111;
 }

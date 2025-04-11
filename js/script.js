@@ -95,7 +95,6 @@ if (savedTheme) {
   // Tema por defecto
   body.classList.add("dark-theme");
 }
-console.log("Boton presionado");
 // Al cambiar el switch
 toggle.addEventListener("change", () => {
   if (toggle.checked) {

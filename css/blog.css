@@ -22,7 +22,8 @@
 }
 
 .barra-filtros .categorias,
-.barra-filtros .etiquetas {
+.barra-filtros .tags {
+  color: #111;
   flex-grow: 1; /* Permitir que ocupen todo el alto disponible */
   display: flex;
   flex-direction: column; /* Asegurar que su contenido esté en columna */
