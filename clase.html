@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>THE GYM</title>
+    <!-- CSS  -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--MENU-->
+    <div class="contenedor-header">
+      <header>
+        <h1>
+          <a href="index.html" class="logo-link"
+            >THE <span class="txtRojo">GYM</span></a
+          >
+        </h1>
+        <nav id="nav">
+          <a href="index.html" onclick="seleccionar()">Inicio</a>
+          <a href="nosotros.html" onclick="seleccionar()">Nosotros</a>
+          <div class="dropdown">
+            <a href="" onclick="seleccionar()">Servicios ▾</a>
+            <div class="submenu">
+              <a href="clase.html">Clases</a>
+              <a href="entrenador.html">Entrenadores</a>
+              <a href="precios.html">Precios</a>
+            </div>
+          </div>
+          <a href="blog.html" onclick="seleccionar()">Blog</a>
+          <a href="contacto.html" onclick="seleccionar()">Contacto</a>
+        </nav>
+        <div class="redes">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-solid fa-phone"></i></a>
+        </div>
+        <!--Icono del menu responsive-->
+        <div
+          id="icono-nav"
+          class="nav-responsive"
+          onclick="mostrarOcultarMenu()"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </header>
+    </div>
+
+    <!--SECCION INICIO-->
+    <section id="inicio-clases" class="inicio-clases">
+      <div class="clases-seccion">
+        <div class="info">
+          <h2>¡<span class="txtRojo">CREE</span> EN TI!</h2>
+          <p>¡Eres más fuerte de lo que crees!</p>
+        </div>
+      </div>
+    </section>
+
+    <!--SECCION CLASES-->
+    <h2 class="titulo">Horarios de Clases</h2>
+    <p class="subtitulo">¡Sé más fuerte que las excusas!</p>
+
+    <input
+      type="radio"
+      class="input-filtro"
+      name="filtro"
+      id="f-todas"
+      checked
+    />
+    <label for="f-todas" class="label-filtro">Todas</label>
+
+    <input type="radio" class="input-filtro" name="filtro" id="f-musculacion" />
+    <label for="f-musculacion" class="label-filtro">Musculación</label>
+
+    <input type="radio" class="input-filtro" name="filtro" id="f-crossfit" />
+    <label for="f-crossfit" class="label-filtro">Crossfit</label>
+
+    <input type="radio" class="input-filtro" name="filtro" id="f-yoga" />
+    <label for="f-yoga" class="label-filtro">Yoga</label>
+
+    <input type="radio" class="input-filtro" name="filtro" id="f-spinning" />
+    <label for="f-spinning" class="label-filtro">Spinning</label>
+
+    <!--HORARIO SEMANAL-->
+    <table>
+      <tr>
+        <th>Hora</th>
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miércoles</th>
+        <th>Jueves</th>
+        <th>Viernes</th>
+        <th>Sábado</th>
+        <th>Domingo</th>
+      </tr>
+      <tr>
+        <td>6:00am - 8:00am</td>
+        <td class="musculacion"><span>Musculación</span>John Cena</td>
+        <td></td>
+        <td class="crossfit"><span>Crossfit</span>Adam Phillips</td>
+        <td></td>
+        <td class="yoga"><span>Yoga</span>James Alien</td>
+        <td></td>
+        <td class="spinning"><span>Spinning</span>Marc Allen</td>
+      </tr>
+      <tr>
+        <td>10:00am - 12:00am</td>
+        <td></td>
+        <td class="yoga"><span>Yoga</span>James Alien</td>
+        <td></td>
+        <td class="musculacion"><span>Musculación</span>John Cena</td>
+        <td></td>
+        <td class="crossfit"><span>Crossfit</span>Adam Phillips</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>17:00pm - 19:00pm</td>
+        <td class="crossfit"><span>Crossfit</span>Adam Phillips</td>
+        <td></td>
+        <td class="yoga"><span>Yoga</span>James Alien</td>
+        <td></td>
+        <td class="musculacion"><span>Musculación</span>John Cena</td>
+        <td></td>
+        <td class="spinning"><span>Spinning</span>Marc Allen</td>
+      </tr>
+      <tr>
+        <td>19:00pm - 21:00pm</td>
+        <td></td>
+        <td class="musculacion"><span>Musculación</span>John Cena</td>
+        <td></td>
+        <td class="crossfit"><span>Crossfit</span>Adam Phillips</td>
+        <td></td>
+        <td class="spinning"><span>Spinning</span>Marc Allen</td>
+        <td></td>
+      </tr>
+    </table>
+
+    <!--SECCION GALERIA-MASONRY-->
+    <h2 class="titulo">Galería THE GYM</h2>
+    <p class="subtitulo">¡Los resultados llegan por esfuerzo constante!</p>
+    <section class="masonry">
+      <article class="galeria">
+        <div class="img-a">
+          <img src="images/f1.jpg" width="500" height="500" alt="Galeria 1" />
+        </div>
+        <div class="img-b">
+          <img src="images/f2.jpg" width="500" height="250" alt="Galeria 2" />
+        </div>
+        <div class="img-c">
+          <img src="images/f3.jpg" width="500" height="250" alt="Galeria 3" />
+        </div>
+        <div class="img-d">
+          <img src="images/f4.jpg" width="250" height="500" alt="Galeria 4" />
+        </div>
+        <div class="img-e">
+          <img src="images/f5.jpg" width="250" height="250" alt="Galeria 5" />
+        </div>
+        <div class="img-f">
+          <img src="images/f6.jpg" width="250" height="500" alt="Galeria 6" />
+        </div>
+        <div class="img-g">
+          <img src="images/f7.jpg" width="500" height="235" alt="Galeria 7" />
+        </div>
+      </article>
+    </section>
+
+    <!--SECCION CARDS CLASES -->
+    <h2 class="titulo">Nuestros Cursos</h2>
+    <p class="subtitulo">¡Este mes comienzo en THE GYM!</p>
+    <div class="cards-clases">
+      <div class="card">
+        <img src="images/musculacion.png" alt="musculacion" />
+        <div class="overlay">
+          <h3>Musculación</h3>
+          <p>Entrenador - Jhon Cena</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div class="price-tag">$50</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/crossfit.jpg" alt="crossfit" />
+        <div class="overlay">
+          <h3>Crossfit</h3>
+          <p>Entrenador - Adam Phillips</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div class="price-tag">$65</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/yoga.jpg" alt="yoga" />
+        <div class="overlay">
+          <h3>Yoga</h3>
+          <p>Entrenador - James Alien</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div class="price-tag">FREE</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/spinning.jpg" alt="spinning" />
+        <div class="overlay">
+          <h3>Spinning</h3>
+          <p>Entrenador - Marc Allen</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div class="price-tag">$40</div>
+        </div>
+      </div>
+    </div>
+
+    <!--FOOTER-->
+    <footer class="footer">
+      <ul class="social-icon">
+        <li class="icon-elemento">
+          <a href="" class="icon">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </li>
+        <li class="icon-elemento">
+          <a href="" class="icon">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+        <li class="icon-elemento">
+          <a href="" class="icon">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+        </li>
+        <li class="icon-elemento">
+          <a href="" class="icon">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </li>
+        <li class="icon-elemento">
+          <a href="" class="icon">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="menu">
+        <li class="menu-elemento">
+          <a href="" class="menu-icon"> Inicio </a>
+        </li>
+        <li class="menu-elemento">
+          <a href="" class="menu-icon"> Equipo </a>
+        </li>
+        <li class="menu-elemento">
+          <a href="" class="menu-icon"> Contacto </a>
+        </li>
+        <li class="menu-elemento">
+          <a href="" class="menu-icon"> Video </a>
+        </li>
+        <li class="menu-elemento">
+          <a href="" class="menu-icon"> Nosotros </a>
+        </li>
+      </ul>
+      <p class="text-footer">@THE GYM | Todos los derechos reservados</p>
+    </footer>
+    <!--SCRIPT-->
+    <script src="js/script.js"></script>
+  </body>
+</html>

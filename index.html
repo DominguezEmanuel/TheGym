@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>THE GYM</title>
+    <!-- FAVICON  -->
+    <!-- CSS  -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--MENU-->
+    <div class="contenedor-header">
+      <header>
+        <h1>
+          <a href="index.html" class="logo-link"
+            >THE <span class="txtRojo">GYM</span></a
+          >
+        </h1>
+        <nav id="nav">
+          <a href="index.html" onclick="seleccionar()">Inicio</a>
+          <a href="nosotros.html" onclick="seleccionar()">Nosotros</a>
+          <div class="dropdown">
+            <a href="" onclick="seleccionar()">Servicios ▾</a>
+            <div class="submenu">
+              <a href="clase.html">Clases</a>
+              <a href="entrenador.html">Entrenadores</a>
+              <a href="precios.html">Precios</a>
+            </div>
+          </div>
+          <a href="blog.html" onclick="seleccionar()">Blog</a>
+          <a href="contacto.html" onclick="seleccionar()">Contacto</a>
+        </nav>
+        <div class="redes">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-solid fa-phone"></i></a>
+        </div>
+        <!--Icono del menu responsive-->
+        <div
+          id="icono-nav"
+          class="nav-responsive"
+          onclick="mostrarOcultarMenu()"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </header>
+    </div>
+
+    <!--SECCION INICIO-->
+    <!--<section id="inicio" class="inicio">
+      <div class="inicio-seccion">
+        <div class="info">
+          <h2>¡<span class="txtRojo">NUNCA </span>TE RINDAS!</h2>
+          <p>¡Sin sudor no hay gloria!</p>
+        </div>
+      </div>
+    </section>-->
+
+    <section id="inicio" class="inicio">
+      <!--Video-->
+      <video class="inicio-video" autoplay muted loop playsinline>
+        <source src="media/hero.mp4" type="video/mp4" />
+        Tu navegador no soporta videos en HTML5.
+      </video>
+      <div class="inicio-overlay">
+        <div class="inicio-seccion">
+          <div class="info">
+            <h2>¡<span class="txtRojo">NUNCA </span>TE RINDAS!</h2>
+            <p>¡Sin sudor no hay gloria!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--SECCION CARDS-->
+    <div class="beneficios-seccion">
+      <div class="titulos">
+        <h4 class="subtitulo">¿Por qué elegirnos?</h4>
+        <h4 class="titulo">Ventajas de unirse a nuestro Gimnasio</h4>
+      </div>
+      <div class="cards-seccion">
+        <div class="card">
+          <img src="images/card-1.jpg" alt="Card 1" />
+          <h4>Videos</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae in
+            quia sunt odio cupiditate impedit maiores cumque soluta, deserunt
+            autem.
+          </p>
+          <a href="">Saber más</a>
+        </div>
+
+        <div class="card">
+          <img src="images/card-2.jpg" alt="Card 2" />
+          <h4>Calendario</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae in
+            quia sunt odio cupiditate impedit maiores cumque soluta, deserunt
+            autem.
+          </p>
+          <a href="">Saber más</a>
+        </div>
+
+        <div class="card">
+          <img src="images/card-3.jpg" alt="Card 3" />
+          <h4>Comunidad</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae in
+            quia sunt odio cupiditate impedit maiores cumque soluta, deserunt
+            autem.
+          </p>
+          <a href="">Saber más</a>
+        </div>
+      </div>
+    </div>
+
+    <!--CONTADOR ANIMADO-->
+    <div class="contador-container">
+      <div class="contador">
+        <span class="numeros">
+          <div>50</div>
+          <div>100</div>
+          <div>150</div>
+          <div>200</div>
+          <div>250</div>
+          <div>300</div>
+          <div>350</div>
+          <div>400</div>
+          <div>450</div>
+          <div>+500</div>
+        </span>
+      </div>
+      <div class="texto">socios satisfechos</div>
+    </div>
+
+    <!--SECCION TESTIMONIOS-->
+    <section class="testimonios">
+      <h4 class="titulo">Caja de opiniones</h4>
+      <h4 class="subtitulo">¿Qué opinan nuestros clientes?</h4>
+      <div class="carrusel">
+        <div class="slide">
+          <img src="images/testimonios-1.jpg" alt="testimonios-1" />
+          <div class="contenido">
+            <p>"El mejor lugar para entrenar"</p>
+            <h4>Héctor Rodriguez</h4>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/testimonios-2.jpg" alt="testimonios-2" />
+          <div class="contenido">
+            <p>"El gimnasio perfecto"</p>
+            <h4>Andrew Garfield</h4>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/testimonios-3.jpg" alt="testimonios-3" />
+          <div class="contenido">
+            <p>"Me encanta el ambiente"</p>
+            <h4>Kim Min-jun</h4>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/testimonios-4.jpg" alt="testimonios-4" />
+          <div class="contenido">
+            <p>"Los equipos son de buena calidad"</p>
+            <h4>Mario Carrera</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--NEWSLETTER-->
+    <section class="newsletter-container">
+      <div class="newsletter-contenido">
+        <h2>Suscríbete a nuestro Boletín</h2>
+        <p>
+          Suscríbase y reciba nuestro último artículo en su bandeja de entrada
+        </p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Correo" required />
+          <button type="submit">Suscríbete</button>
+        </form>
+      </div>
+    </section>
+
+    <!--CONTACTO-->
+    <h5 class="subtitulo">Contáctanos</h5>
+    <h1 class="titulo">Envíanos un correo</h1>
+    <div class="contacto-container">
+      <div class="caja-contacto">
+        <i class="fas fa-map-marker-alt"></i>
+        <h4>Dirección</h4>
+        <p>123 Street, New York, USA</p>
+      </div>
+      <div class="caja-contacto">
+        <i class="fa-solid fa-phone"></i>
+        <h4>Teléfono</h4>
+        <p>+012 345 6789</p>
+      </div>
+      <div class="caja-contacto">
+        <i class="fas fa-envelope"></i>
+        <h4>Email</h4>
+        <p>info@example.com</p>
+      </div>
+    </div>
+    <!--MAPA Y FORMULARIO-->
+    <div class="mapa-form-container">
+      <div class="mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24137.341280152208!2d-74.0060157!3d40.7127281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjEiTiA3NMKwMDAnMzUuNSJX!5e0!3m2!1sen!2sus!4v1616725399797!5m2!1sen!2sus"
+          allowfullscreen=""
+          loading="lazy"
+        >
+        </iframe>
+      </div>
+
+      <!-- FORMULARIO -->
+      <form class="contacto-form">
+        <input type="text" placeholder="Tu nombre" required />
+        <input type="email" placeholder="Tu correo" required />
+        <input type="text" placeholder="Asunto" required />
+        <textarea placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </div>
+
+    <!--FOOTER-->
+    <footer class="footer">
+      <ul class="social-icon">
+        <li class="icon-elemento">
+          <a href="" class="icon">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </li>
+        <li class="icon-elemento">
+          <a href="" class="icon">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+        <li class="icon-elemento">
+          <a href="" class="icon">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+        </li>
+        <li class="icon-elemento">
+          <a href="" class="icon">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </li>
+        <li class="icon-elemento">
+          <a href="" class="icon">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="menu">
+        <li class="menu-elemento">
+          <a href="" class="menu-icon"> Inicio </a>
+        </li>
+        <li class="menu-elemento">
+          <a href="" class="menu-icon"> Equipo </a>
+        </li>
+        <li class="menu-elemento">
+          <a href="" class="menu-icon"> Contacto </a>
+        </li>
+        <li class="menu-elemento">
+          <a href="" class="menu-icon"> Video </a>
+        </li>
+        <li class="menu-elemento">
+          <a href="" class="menu-icon"> Nosotros </a>
+        </li>
+      </ul>
+      <p class="text-footer">@THE GYM | Todos los derechos reservados</p>
+    </footer>
+    <!--SCROLL-->
+    <a href="#" class="scroll">
+      <i class="fa-solid fa-angles-up"></i>
+    </a>
+    <!--SCRIPT-->
+    <script src="js/script.js"></script>
+  </body>
+</html>

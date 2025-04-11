@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>THE GYM</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--MENU-->
+    <div class="contenedor-header">
+      <header>
+        <h1>
+          <a href="index.html" class="logo-link"
+            >THE <span class="txtRojo">GYM</span></a
+          >
+        </h1>
+        <nav id="nav">
+          <a href="index.html" onclick="seleccionar()">Inicio</a>
+          <a href="nosotros.html" onclick="seleccionar()">Nosotros</a>
+          <div class="dropdown">
+            <a href="" onclick="seleccionar()">Servicios ▾</a>
+            <div class="submenu">
+              <a href="clase.html">Clases</a>
+              <a href="entrenador.html">Entrenadores</a>
+              <a href="precios.html">Precios</a>
+            </div>
+          </div>
+          <a href="blog.html" onclick="seleccionar()">Blog</a>
+          <a href="contacto.html" onclick="seleccionar()">Contacto</a>
+        </nav>
+        <div class="redes">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-solid fa-phone"></i></a>
+        </div>
+        <!--Icono del menu responsive-->
+        <div
+          id="icono-nav"
+          class="nav-responsive"
+          onclick="mostrarOcultarMenu()"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </header>
+    </div>
+
+    <!--FORMULARIO CONTACTO-->
+    <div class="formulario-container">
+      <form class="formulario" id="contactoFormulario">
+        <div class="form-grupo">
+          <label for="name" class="label-form">Nombre y Apellido:</label>
+          <input type="text" id="name" name="name" required minlength="2" />
+        </div>
+        <div class="form-grupo">
+          <label for="email" class="label-form">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-grupo">
+          <label for="message" class="label-form">Mensaje:</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            required
+            minlength="10"
+          ></textarea>
+        </div>
+        <button type="submit" class="spinner-button" id="btnEnviar">
+          <span class="btn-text">Enviar</span>
+          <div class="spinner" id="spinner"></div>
+        </button>
+      </form>
+    </div>
+    <!-- Modal -->
+    <div class="modal" id="modal">
+      <div class="modal-contenido">
+        <h2>¡Mensaje enviado! <i class="fa-solid fa-check"></i></h2>
+        <p>Gracias por contactarnos.</p>
+        <p>Te responderemos pronto.</p>
+        <button onclick="closeModal()">Cerrar</button>
+      </div>
+    </div>
+    <!--FOOTER-->
+    <footer class="footer">
+      <ul class="social-icon">
+        <li class="icon-elemento">
+          <a href="" class="icon">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </li>
+        <li class="icon-elemento">
+          <a href="" class="icon">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+        <li class="icon-elemento">
+          <a href="" class="icon">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+        </li>
+        <li class="icon-elemento">
+          <a href="" class="icon">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </li>
+        <li class="icon-elemento">
+          <a href="" class="icon">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="menu">
+        <li class="menu-elemento">
+          <a href="" class="menu-icon"> Inicio </a>
+        </li>
+        <li class="menu-elemento">
+          <a href="" class="menu-icon"> Equipo </a>
+        </li>
+        <li class="menu-elemento">
+          <a href="" class="menu-icon"> Contacto </a>
+        </li>
+        <li class="menu-elemento">
+          <a href="" class="menu-icon"> Video </a>
+        </li>
+        <li class="menu-elemento">
+          <a href="" class="menu-icon"> Nosotros </a>
+        </li>
+      </ul>
+      <p class="text-footer">@THE GYM | Todos los derechos reservados</p>
+    </footer>
+    <!--SCRIPT-->
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>THE GYM</title>
+    <!-- Archivos CSS-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/blog.css" />
+  </head>
+  <body>
+    <!--MENU-->
+    <div class="contenedor-header">
+      <header>
+        <h1>
+          <a href="index.html" class="logo-link"
+            >THE <span class="txtRojo">GYM</span></a
+          >
+        </h1>
+        <nav id="nav">
+          <a href="index.html" onclick="seleccionar()">Inicio</a>
+          <a href="nosotros.html" onclick="seleccionar()">Nosotros</a>
+          <div class="dropdown">
+            <a href="" onclick="seleccionar()">Servicios ▾</a>
+            <div class="submenu">
+              <a href="clase.html">Clases</a>
+              <a href="entrenador.html">Entrenadores</a>
+              <a href="precios.html">Precios</a>
+            </div>
+          </div>
+          <a href="blog.html" onclick="seleccionar()">Blog</a>
+          <a href="contacto.html" onclick="seleccionar()">Contacto</a>
+        </nav>
+        <div class="redes">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-solid fa-phone"></i></a>
+        </div>
+        <!--Icono del menu responsive-->
+        <div
+          id="icono-nav"
+          class="nav-responsive"
+          onclick="mostrarOcultarMenu()"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </header>
+    </div>
+    <!--SECCION INICIO-->
+    <section id="inicio-clases" class="inicio-clases">
+      <div class="clases-seccion">
+        <div class="info">
+          <h2>¡CUERPO SANO <span class="txtRojo">MENTE FUERTE</span>!</h2>
+          <p>¡No es magia, es trabajo duro!</p>
+        </div>
+      </div>
+    </section>
+
+    <!--SECCION-BLOG-->
+    <h2 class="titulo">Nuestro Blog</h2>
+    <p class="subtitulo">Últimos artículo del Blog</p>
+    <div class="blog-container">
+      <!--CATEGORIAS-->
+      <input type="radio" name="categoria" id="todas" checked />
+      <input type="radio" name="categoria" id="nutricion" />
+      <input type="radio" name="categoria" id="entrenamiento" />
+      <input type="radio" name="categoria" id="salud" />
+      <input type="radio" name="categoria" id="estilo-vida" />
+      <!--TAGS-->
+      <input type="radio" name="tag" id="tag-todas" />
+      <input type="radio" name="tag" id="fitness" />
+      <input type="radio" name="tag" id="dieta" />
+      <input type="radio" name="tag" id="ejercicio" />
+      <input type="radio" name="tag" id="bienestar" />
+      <aside class="barra-filtros">
+        <h2>CATEGORÍA</h2>
+        <div class="categorias">
+          <ul>
+            <li><label for="todas">Todas</label></li>
+            <li><label for="nutricion">Nutricion</label></li>
+            <li><label for="entrenamiento">Entrenamiento</label></li>
+            <li><label for="salud">Salud</label></li>
+            <li><label for="estilo-vida">Estilo de vida</label></li>
+          </ul>
+        </div>
+        <div class="tags">
+          <h2>ETIQUETA</h2>
+          <ul>
+            <li><label for="tag-todas">Todas</label></li>
+            <li><label for="fitness">Fitness</label></li>
+            <li><label for="dieta">Dieta</label></li>
+            <li><label for="ejercicio">Ejercicio</label></li>
+            <li><label for="bienestar">Bienestar</label></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!--ARTICULOS-->
+      <section class="articulos">
+        <!--ARTICULO-1-->
+        <article
+          class="articulo revelar"
+          data-category="nutricion"
+          data-tags="fitness dieta"
+        >
+          <img src="images/blog/nutricion.jpg" alt="articulo-1" />
+          <h2><a href="">Guía para ganar masa muscular</a></h2>
+          <p>Recetas, consejos y tips para ganar masa muscular.</p>
+          <div class="tipo-articulo">
+            <span> Categoría: Nutrición</span>
+            <span>Etiqueta: Fitness y Dieta</span>
+          </div>
+          <div class="comentarios">
+            <h3>Comentarios</h3>
+            <div class="comentario">
+              <div class="avatar"><span></span></div>
+              <p><strong>user@gmail.com: </strong>¡Si funciona!</p>
+            </div>
+            <div class="comentario">
+              <div class="avatar"><span></span></div>
+              <p><strong>user@example.com: </strong>¡Recomendado!</p>
+            </div>
+          </div>
+        </article>
+        <!--ARTICULO-2-->
+        <article
+          class="articulo revelar"
+          data-category="nutricion"
+          data-tags="dieta"
+        >
+          <img src="images/blog/comida-nutritiva.jpg" alt="articulo-2" />
+          <h2><a href="">Dieta para una vida saludable</a></h2>
+          <p>Recetas sencillas de comidas saludables y muy deliciosas.</p>
+          <div class="tipo-articulo">
+            <span>Categoría: Nutrición</span>
+            <span>Etiqueta: Dieta</span>
+          </div>
+          <div class="comentarios">
+            <h3>Comentarios</h3>
+            <div class="comentario">
+              <div class="avatar"><span></span></div>
+              <p><strong>user@gmail.com: </strong>¡Deliciosas!</p>
+            </div>
+            <div class="comentario">
+              <div class="avatar"><span></span></div>
+              <p><strong>user@example.com: </strong>😋​</p>
+            </div>
+          </div>
+        </article>
+        <!--ARTICULO-3-->
+        <article
+          class="articulo revelar"
+          data-category="entrenamiento salud"
+          data-tags="fitness ejercicio"
+        >
+          <img src="images/blog/entrenamiento-casa.jpg" alt="articulo-3" />
+          <h2><a href="">Entrenamiento en casa</a></h2>
+          <p>Rutinas eficientes para poder ejercitarse en casa.</p>
+          <div class="tipo-articulo">
+            <span>Categoría: Entrenamiento y Salud</span>
+            <span>Etiqueta: Fitness y Ejercicio</span>
+          </div>
+          <div class="comentarios">
+            <h3>Comentarios</h3>
+            <div class="comentario">
+              <div class="avatar"><span></span></div>
+              <p><strong>user@gmail.com: </strong>💪​💪​</p>
+            </div>
+            <div class="comentario">
+              <div class="avatar"><span></span></div>
+              <p><strong>user@example.com: </strong>¡Satisfecho!🤪​</p>
+            </div>
+          </div>
+        </article>
+        <!--ARTICULO-4-->
+        <article
+          class="articulo revelar"
+          data-category="salud"
+          data-tags="bienestar"
+        >
+          <img src="images/blog/hidratacion.jpg" alt="articulo-4" />
+          <h2><a href="">La hidratación y la salud</a></h2>
+          <p>
+            Aprende lo importante que es beber agua para tu salud y bienestar.
+          </p>
+          <div class="tipo-articulo">
+            <span>Categoría: Salud</span>
+            <span>Etiqueta: Bienestar</span>
+          </div>
+          <div class="comentarios">
+            <h3>Comentarios</h3>
+            <div class="comentario">
+              <div class="avatar"><span></span></div>
+              <p><strong>user@gmail.com: </strong>💧​❤️​​</p>
+            </div>
+            <div class="comentario">
+              <div class="avatar"><span></span></div>
+              <p><strong>user@example.com: </strong>¡Viva el aguaa!​</p>
+            </div>
+          </div>
+        </article>
+        <!--ARTICULO-5-->
+        <article
+          class="articulo revelar"
+          data-category="salud estilo-vida"
+          data-tags="bienestar fitness ejercicio"
+        >
+          <img src="images/blog/estilo-vida.jpg" alt="articulo-5" />
+          <h2><a href="">Hacé un cambio</a></h2>
+          <p>Cambiar los hábitos es el primer paso para mejorar.</p>
+          <div class="tipo-articulo">
+            <span>Categoría: Salud y Estilo de vida</span>
+            <span>Etiqueta: Bienestar, Fitness y Ejercicio</span>
+          </div>
+          <div class="comentarios">
+            <h3>Comentarios</h3>
+            <div class="comentario">
+              <div class="avatar"><span></span></div>
+              <p><strong>user@gmail.com: </strong>Tú también puedes​​​</p>
+            </div>
+            <div class="comentario">
+              <div class="avatar"><span></span></div>
+              <p><strong>user@example.com: </strong>🤗​🤗​🤗​​</p>
+            </div>
+          </div>
+        </article>
+        <!--ARTICULO-6-->
+        <article
+          class="articulo revelar"
+          data-category="estilo-vida"
+          data-tags="bienestar"
+        >
+          <img src="images/blog/meditacion.jpg" alt="articulo-6" />
+          <h2><a href="">Tu camino hacia la calma</a></h2>
+          <p>Guía para encontrar ese espacio de paz que vive en tí.</p>
+          <div class="tipo-articulo">
+            <span>Categoría: Estilo de vida</span>
+            <span>Etiqueta: Bienestar</span>
+          </div>
+          <div class="comentarios">
+            <h3>Comentarios</h3>
+            <div class="comentario">
+              <div class="avatar"><span></span></div>
+              <p><strong>user@gmail.com: </strong>Pazzzz🧘🏾​​​​</p>
+            </div>
+            <div class="comentario">
+              <div class="avatar"><span></span></div>
+              <p><strong>user@example.com: </strong>¡Me encantó!❤️​​​</p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+    <!--FOOTER-->
+    <footer class="footer">
+      <ul class="social-icon">
+        <li class="icon-elemento">
+          <a href="" class="icon">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </li>
+        <li class="icon-elemento">
+          <a href="" class="icon">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+        <li class="icon-elemento">
+          <a href="" class="icon">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+        </li>
+        <li class="icon-elemento">
+          <a href="" class="icon">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+        </li>
+        <li class="icon-elemento">
+          <a href="" class="icon">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="menu">
+        <li class="menu-elemento">
+          <a href="" class="menu-icon"> Inicio </a>
+        </li>
+        <li class="menu-elemento">
+          <a href="" class="menu-icon"> Equipo </a>
+        </li>
+        <li class="menu-elemento">
+          <a href="" class="menu-icon"> Contacto </a>
+        </li>
+        <li class="menu-elemento">
+          <a href="" class="menu-icon"> Video </a>
+        </li>
+        <li class="menu-elemento">
+          <a href="" class="menu-icon"> Nosotros </a>
+        </li>
+      </ul>
+      <p class="text-footer">@THE GYM | Todos los derechos reservados</p>
+    </footer>
+    <!--SCRIPT-->
+    <script src="js/script.js"></script>
+  </body>
+</html>
