@@ -1,10 +1,8 @@
-***********************************************/
 /*************PAGINA DE PRECIOS****************/
 /*********************************************/
 /*SECCION-PRECIOS*/
 .seccion-precios {
   padding: 5rem 2rem;
-  background: #fff;
   text-align: center;
 }
 
@@ -72,7 +70,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* Espacio entre los planes */
+  gap: 30px; /* Espacio entre los planes */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -83,17 +81,22 @@
   height: auto;
   border-radius: 10px;
   padding: 2rem;
-  box-shadow: 0 5px 15px #111;
+  box-shadow: 0 15px 40px #2ecc71;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .plan:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 45px #2ecc71;
 }
 
 .plan.destacado {
-  box-shadow: 0 10px 25px #ff1133; /*Sombra*/
+  box-shadow: 0 15px 40px #ff1133; /*Sombra*/
+}
+
+.plan.destacado:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px #ff1133;
 }
 
 .plan h3 {
